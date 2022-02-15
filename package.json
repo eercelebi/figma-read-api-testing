@@ -1,0 +1,8 @@
+{
+  "name": "figma-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Emre Ercelebi <eercelebi@yext.com>",
+  "license": "MIT",
+  "type": "module"
+}
