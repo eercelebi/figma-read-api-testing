@@ -6,6 +6,7 @@ import { BASE_URL } from './helpers/constants.js';
 import { ACCESS_TOKEN } from './token.js';
 import fetch from 'node-fetch';
 import { getFileId } from './helpers/funcs.js';
+// import fs from 'fs';
 
 export const getFile = async projectUrl => {
   const fileKey = getFileId(projectUrl);
@@ -20,5 +21,6 @@ export const getFile = async projectUrl => {
   const response = await fetch(requestUrl, options);
   const data = await response.json();
 
+  // fs.writeFileSync('sampleData/sampleData.json', JSON.stringify(data, null, 2));
   return data;
 }
