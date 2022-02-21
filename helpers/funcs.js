@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { STYLESHEET_PATH } from './constants.js';
+import { COLOR_STYLESHEET_PATH } from './constants.js';
 
 export const getFileId = (url) => {
   const stripped = url.replace('https://www.figma.com/file/', '');
@@ -12,6 +12,6 @@ export const writeToStylesheet = (lines, commentHeader = '') => {
   }
 
   lines.forEach(line => {
-    fs.appendFileSync(STYLESHEET_PATH, `${line}\n`);
+    fs.appendFileSync(COLOR_STYLESHEET_PATH, `${line}\n`);
   });
 }
