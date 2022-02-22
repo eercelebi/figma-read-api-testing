@@ -1,0 +1,91 @@
+// Heading classes
+.Heading--lead
+{
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-size: 28px;
+	letter-spacing: 0px;
+	line-height: 32px;
+
+	@include bpgte($desktop-bp-min)
+	{
+		font-family: 'Roboto';
+		font-weight: 400;
+		font-size: 48px;
+		letter-spacing: 0px;
+		line-height: 64px;
+	}
+}
+
+.Heading--head
+{
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-size: 24px;
+	letter-spacing: 0px;
+	line-height: 32px;
+
+	@include bpgte($desktop-bp-min)
+	{
+		font-family: 'Roboto';
+		font-weight: 400;
+		font-size: 34px;
+		letter-spacing: 0px;
+		line-height: 40px;
+	}
+}
+
+.Heading--sub
+{
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-size: 20px;
+	letter-spacing: 0px;
+	line-height: 28px;
+
+	@include bpgte($desktop-bp-min)
+	{
+		font-family: 'Roboto';
+		font-weight: 400;
+		font-size: 24px;
+		letter-spacing: 0px;
+		line-height: 32px;
+	}
+}
+
+.Heading--flag
+{
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-size: 18px;
+	letter-spacing: 0px;
+	line-height: 24px;
+
+	@include bpgte($desktop-bp-min)
+	{
+		font-family: 'Roboto';
+		font-weight: 400;
+		font-size: 20px;
+		letter-spacing: 0px;
+		line-height: 28px;
+	}
+}
+
+.Heading--brow
+{
+	font-family: 'Roboto';
+	font-weight: 700;
+	font-size: 16px;
+	letter-spacing: 0px;
+	line-height: 24px;
+
+	@include bpgte($desktop-bp-min)
+	{
+		font-family: 'Roboto';
+		font-weight: 700;
+		font-size: 18px;
+		letter-spacing: 0px;
+		line-height: 24px;
+	}
+}
+

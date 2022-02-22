@@ -1,22 +1,10 @@
 import { Color } from './helpers/Color.js';
-import { writeToStylesheet } from './helpers/funcs.js';
-import fs from 'fs';
+import { findNode, writeToStylesheet } from './helpers/funcs.js';
+import { COLOR_STYLESHEET_PATH } from './helpers/constants.js';
 
 const targetNodeName = 'Colors';
 
-const findColorsNode = node => {
-  if (node.name === targetNodeName) {
-    return node;
-  } else if (node.children && node.children.length) {
-    for (const childNode of node.children) {
-      const result = findColorsNode(childNode);
-      if (result != null && result.name === targetNodeName) {
-        return result;
-      }
-    }
-  }
-  return null;
-}
+const findColorsNode = node => findNode(node, targetNodeName);
 
 const getColorInstances = (node, instances=[]) => {
   if (node.name === 'Color' && node.type === 'INSTANCE') {
@@ -52,6 +40,6 @@ export const getColors = data => {
   const colorNode = findColorsNode(data.document);
   const colorInstances = getColorInstances(colorNode);
   const colorVarDeclarations = getColorVarDeclarations(colorInstances);
-  writeToStylesheet(colorVarDeclarations);
+  writeToStylesheet(COLOR_STYLESHEET_PATH, colorVarDeclarations, 'Color variables');
   console.log(colorVarDeclarations);
 }
